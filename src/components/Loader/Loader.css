@@ -1,0 +1,132 @@
+.loader-wrapper{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100vh;
+    background:linear-gradient(135deg,#f8fcff,#ffffff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:99999;
+    overflow:hidden;
+}
+
+.loader-wrapper::before{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    background:rgba(14,165,233,.08);
+    filter:blur(90px);
+}
+
+.loader-content{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    z-index:2;
+}
+
+.loader-ring{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:35px;
+}
+
+.loader-circle{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    border:6px solid rgba(14,165,233,.15);
+    border-top:6px solid #0ea5e9;
+    border-right:6px solid #38bdf8;
+    box-shadow:
+        0 0 20px rgba(14,165,233,.25),
+        0 0 40px rgba(14,165,233,.15);
+}
+
+.loader-logo{
+    font-size:3rem;
+    font-weight:700;
+    color:#102a43;
+    margin-bottom:12px;
+    letter-spacing:.5px;
+}
+
+.loader-logo span{
+    color:#0ea5e9;
+}
+
+.loader-content p{
+    color:#64748b;
+    font-size:1rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(.96);
+    }
+
+    50%{
+        transform:scale(1.03);
+    }
+
+    100%{
+        transform:scale(.96);
+    }
+
+}
+
+.loader-content{
+    animation:pulse 2s ease-in-out infinite;
+}
+
+@media(max-width:768px){
+
+    .loader-ring{
+        width:110px;
+        height:110px;
+    }
+
+    .loader-logo{
+        font-size:2.4rem;
+    }
+
+    .loader-content p{
+        font-size:.9rem;
+        text-align:center;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .loader-ring{
+        width:95px;
+        height:95px;
+    }
+
+    .loader-circle{
+        border-width:5px;
+    }
+
+    .loader-logo{
+        font-size:2rem;
+    }
+
+    .loader-content p{
+        font-size:.8rem;
+        letter-spacing:1.5px;
+    }
+
+}

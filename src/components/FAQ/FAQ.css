@@ -1,0 +1,138 @@
+.faq{
+    width:100%;
+    padding:100px 8%;
+    background:#f8fcff;
+    overflow:hidden;
+}
+
+.faq-container{
+    max-width:1100px;
+    margin:auto;
+}
+
+.faq-heading{
+    max-width:700px;
+    margin:0 auto 70px;
+    text-align:center;
+}
+
+.faq-heading h2{
+    font-size:3rem;
+    color:#102a43;
+    margin:20px 0;
+    line-height:1.2;
+}
+
+.faq-heading h2 span{
+    color:#0ea5e9;
+}
+
+.faq-heading p{
+    color:#64748b;
+    font-size:1.05rem;
+    line-height:1.8;
+}
+
+.faq-list{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.faq-item{
+    background:#ffffff;
+    border:1px solid #e5edf5;
+    border-radius:22px;
+    overflow:hidden;
+    transition:.35s;
+    box-shadow:0 10px 30px rgba(15,23,42,.05);
+}
+
+.faq-item:hover{
+    transform:translateY(-4px);
+    box-shadow:0 18px 45px rgba(14,165,233,.12);
+}
+
+.faq-item.active{
+    border-color:#0ea5e9;
+}
+
+.faq-question{
+    width:100%;
+    background:transparent;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    padding:26px 30px;
+    cursor:pointer;
+    color:#102a43;
+    font-size:1.08rem;
+    font-weight:600;
+    text-align:left;
+}
+
+.faq-question svg{
+    color:#0ea5e9;
+    flex-shrink:0;
+    transition:.3s;
+}
+
+.faq-item.active .faq-question svg{
+    transform:rotate(180deg);
+}
+
+.faq-answer{
+    overflow:hidden;
+}
+
+.faq-answer p{
+    padding:0 30px 28px;
+    color:#64748b;
+    line-height:1.9;
+    font-size:1rem;
+}
+
+@media(max-width:768px){
+
+    .faq{
+        padding:80px 6%;
+    }
+
+    .faq-heading{
+        margin-bottom:50px;
+    }
+
+    .faq-heading h2{
+        font-size:2.3rem;
+    }
+
+    .faq-question{
+        padding:22px 22px;
+        font-size:1rem;
+    }
+
+    .faq-answer p{
+        padding:0 22px 24px;
+        font-size:.95rem;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .faq-heading h2{
+        font-size:2rem;
+    }
+
+    .faq-question{
+        gap:15px;
+        font-size:.95rem;
+    }
+
+    .faq-question svg{
+        width:20px;
+        height:20px;
+    }
+
+}
